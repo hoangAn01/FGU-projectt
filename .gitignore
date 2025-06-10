@@ -10,6 +10,7 @@
 [Rr]ecordings/
 Assets/StreamingAssets/aa.meta
 Assets/StreamingAssets/aa/
+/[Aa]ssets/Plugins/Editor/JetBrains*
 
 # ========== Unity cache (nặng & không cần thiết) ==========
 Library/PackageCache/
@@ -19,6 +20,10 @@ Library/Bee/
 
 # ========== Visual Studio / JetBrains / IDEs ==========
 .vs/
+# Gradle cache directory
+.gradle/
+ExportedObj/
+.consulo/
 *.csproj
 *.unityproj
 *.sln
@@ -60,3 +65,14 @@ Assets/Plugins/Editor/JetBrains*
 *.dylib
 *.lib
 *.so
+
+# Unity3D generated meta files
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# Unity3D generated file on crash reports
+sysinfo.txt
+
+# Packed Addressables
+/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
