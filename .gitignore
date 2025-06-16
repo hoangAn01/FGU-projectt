@@ -1,0 +1,62 @@
+# ========== Unity generated folders/files ==========
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Mm]emoryCaptures/
+[Rr]ecordings/
+Assets/StreamingAssets/aa.meta
+Assets/StreamingAssets/aa/
+
+# ========== Unity cache (nặng & không cần thiết) ==========
+Library/PackageCache/
+Library/ShaderCache/
+Library/ScriptAssemblies/
+Library/Bee/
+
+# ========== Visual Studio / JetBrains / IDEs ==========
+.vs/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# ========== OS / Tool generated ==========
+.DS_Store
+Thumbs.db
+
+# ========== Crashlytics / Analytics ==========
+crashlytics-build.properties
+
+# ========== Unity Addressables Packed ==========
+Assets/AddressableAssetsData/*/*.bin*
+
+# ========== Rider ==========
+.idea/
+*.sln.iml
+Assets/Plugins/Editor/JetBrains*
+
+# ========== Build artifacts ==========
+*.apk
+*.aab
+*.app
+*.unitypackage
+
+# ========== Git Large File Storage suggestion ==========
+*.dll
+*.dylib
+*.lib
+*.so
