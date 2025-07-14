@@ -13,6 +13,21 @@ public class Move_Character : MonoBehaviour
 
     private Vector3 originalScale;
 
+    private static Move_Character instance;
+
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
