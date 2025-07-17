@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -7,10 +8,12 @@ public class PlayerHealth : MonoBehaviour
 
     public ThanhHp thanhHp; // Tham chiếu đến script và thanh HP UI
 
+    public Animator animator;
+
     private void Start()
     {
         currentHp = maxHp;
-
+        animator = GetComponent<Animator>();
         if (thanhHp != null)
         {
             thanhHp.capNhatHp(currentHp, maxHp);
@@ -38,10 +41,8 @@ public class PlayerHealth : MonoBehaviour
     {
         // Xử lý khi nhân vật chết (vd: disable, respawn, reload scene)
         Debug.Log("Player died!");
-        // Ví dụ:
-
-        //Destroy(this.gameObject); // Xóa đối tượng nhân vật
-                            // gameObject.SetActive(false);
-
+        animator.SetBool("isDead", true);
+        // Chuyển sang scene PlayAgain
+        UnityEngine.SceneManagement.SceneManager.LoadScene("PlayAgain");
     }
 }

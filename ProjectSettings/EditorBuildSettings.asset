@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/mini boss.unity
     guid: 8d22f6f619c42e242a93b76d281a11d9
+  - enabled: 1
+    path: Assets/Scenes/PlayAgain.unity
+    guid: fd941bfc9ceda8a43b14cda46e680558
   m_configObjects: {}
