@@ -28,12 +28,12 @@ public class PlayerAttack : MonoBehaviour
         animator.SetTrigger("Attack");
         Debug.Log("chém");
         // Phát hiện kẻ địch trong phạm vi tấn công
-        Collider[] hitEnemies = Physics.OverlapSphere(transform.position, attackRange, enemyLayers);
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, attackRange, enemyLayers);
 
-        foreach (Collider enemy in hitEnemies)
+        foreach (Collider2D enemy in hitEnemies)
         {
             // Gây sát thương cho kẻ địch (giả sử kẻ địch có script PlayerHealth hoặc EnemyHealth)
-            PlayerHealth enemyHealth = enemy.GetComponent<PlayerHealth>();
+            MiniBossHealth enemyHealth = enemy.GetComponent<MiniBossHealth>();
             if (enemyHealth != null)
             {
                 enemyHealth.TakeDamage(attackDamage);
