@@ -7,6 +7,11 @@ public class MiniBossHealth : MonoBehaviour
     public float currentHealth;
     public Image healthBarFill; // Kéo Image Fill vào đây trong Inspector
 
+    // Thêm biến prefab bình máu và tỉ lệ rơi
+    public GameObject healthPotionPrefab;
+    [Range(0f, 1f)]
+    public float dropRate = 0.5f; // 50% tỉ lệ rơi
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -34,7 +39,11 @@ public class MiniBossHealth : MonoBehaviour
 
     void Die()
     {
-        // Xử lý khi quái chết (animation, destroy, v.v.)
+        // Tỉ lệ rơi bình máu
+        if (healthPotionPrefab != null && Random.value < dropRate)
+        {
+            Instantiate(healthPotionPrefab, transform.position, Quaternion.identity);
+        }
         Destroy(gameObject);
     }
 }

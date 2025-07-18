@@ -45,4 +45,15 @@ public class PlayerHealth : MonoBehaviour
         // Chuyển sang scene PlayAgain
         UnityEngine.SceneManagement.SceneManager.LoadScene("PlayAgain");
     }
+
+    public void Heal(int amount)
+    {
+        currentHp += amount;
+        if (currentHp > maxHp) currentHp = maxHp;
+        if (thanhHp != null)
+        {
+            thanhHp.capNhatHp(currentHp, maxHp);
+        }
+        Debug.Log("Đã hồi máu: " + amount + " | Máu hiện tại: " + currentHp);
+    }
 }

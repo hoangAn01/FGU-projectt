@@ -863,7 +863,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1098274642}
         m_TargetAssemblyTypeName: PlayAgainMenu, Assembly-CSharp
-        m_MethodName: Quit
+        m_MethodName: Replay
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
