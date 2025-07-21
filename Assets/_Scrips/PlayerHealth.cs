@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
+using TMPro; // Thêm dòng này
+ // Thêm dòng này
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -10,6 +13,10 @@ public class PlayerHealth : MonoBehaviour
 
     public Animator animator;
 
+    public int score = 0;
+
+    public TextMeshProUGUI scoreText; // Thêm biến này
+
     private void Start()
     {
         currentHp = maxHp;
@@ -18,6 +25,7 @@ public class PlayerHealth : MonoBehaviour
         {
             thanhHp.capNhatHp(currentHp, maxHp);
         }
+        UpdateScoreUI(); // Cập nhật UI khi bắt đầu
     }
 
     // Hàm trừ HP khi bị trúng
@@ -39,11 +47,16 @@ public class PlayerHealth : MonoBehaviour
 
     private void Die()
     {
-        // Xử lý khi nhân vật chết (vd: disable, respawn, reload scene)
         Debug.Log("Player died!");
         animator.SetBool("isDead", true);
-        // Chuyển sang scene PlayAgain
-        UnityEngine.SceneManagement.SceneManager.LoadScene("PlayAgain");
+        StartCoroutine(WaitForDeathAnimation());
+    }
+
+    private IEnumerator WaitForDeathAnimation()
+    {
+        // Giả sử animation chết dài 2 giây,
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene("PlayAgain");
     }
 
     public void Heal(int amount)
@@ -55,5 +68,20 @@ public class PlayerHealth : MonoBehaviour
             thanhHp.capNhatHp(currentHp, maxHp);
         }
         Debug.Log("Đã hồi máu: " + amount + " | Máu hiện tại: " + currentHp);
+    }
+
+    public void AddScore(int amount)
+    {
+        score += amount;
+        UpdateScoreUI(); // Cập nhật UI mỗi khi cộng điểm
+        Debug.Log("Điểm hiện tại: " + score);
+    }
+
+    private void UpdateScoreUI()
+    {
+        if (scoreText != null)
+        {
+            scoreText.text = "Điểm: " + score;
+        }
     }
 }

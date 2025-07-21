@@ -357,7 +357,7 @@ MonoBehaviour:
   currentHealth: 0
   healthBarFill: {fileID: 7925924100324708375}
   healthPotionPrefab: {fileID: 6498951438778049995, guid: ef17f247d84cf534590fbebef8237978, type: 3}
-  dropRate: 1
+  dropRate: 0.69
 --- !u!1 &7925924100682784040
 GameObject:
   m_ObjectHideFlags: 0

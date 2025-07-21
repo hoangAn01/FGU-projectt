@@ -45,5 +45,12 @@ public class MiniBossHealth : MonoBehaviour
             Instantiate(healthPotionPrefab, transform.position, Quaternion.identity);
         }
         Destroy(gameObject);
+
+        // Tìm player và cộng điểm
+        PlayerHealth player = FindObjectOfType<PlayerHealth>();
+        if (player != null)
+        {
+            player.AddScore(1);
+        }
     }
 }
