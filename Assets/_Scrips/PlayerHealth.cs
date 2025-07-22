@@ -49,6 +49,19 @@ public class PlayerHealth : MonoBehaviour
     {
         Debug.Log("Player died!");
         animator.SetBool("isDead", true);
+        
+        // Lưu điểm hiện tại để màn hình "Play Again" có thể hiển thị
+        PlayerPrefs.SetInt("LastScore", score);
+
+        // Kiểm tra và lưu điểm cao
+        int highScore = PlayerPrefs.GetInt("HighScore", 0);
+        if (score > highScore)
+        {
+            PlayerPrefs.SetInt("HighScore", score);
+            Debug.Log("New High Score: " + score);
+        }
+        PlayerPrefs.Save(); // Đảm bảo dữ liệu được ghi vào đĩa ngay lập tức
+
         StartCoroutine(WaitForDeathAnimation());
     }
 
