@@ -2,7 +2,6 @@
 
 public class Move_Character : MonoBehaviour
 {
-  
     public float speed = 5f;
     public float jumpForce = 5f;
 
@@ -15,6 +14,8 @@ public class Move_Character : MonoBehaviour
 
     private static Move_Character instance;
 
+    private AudioManager audioManager; // Move declaration inside the class
+
     void Awake()
     {
         if (instance == null)
@@ -26,6 +27,8 @@ public class Move_Character : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        // Initialize audioManager here
+        audioManager = GameObject.FindGameObjectWithTag("Audio")?.GetComponent<AudioManager>();
     }
 
     void Start()
@@ -52,6 +55,11 @@ public class Move_Character : MonoBehaviour
         // Nhảy
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
+            if (audioManager != null && audioManager.Jump != null)
+                audioManager.PlaySFX(audioManager.Jump); // Play jump sound if available
+            else
+                Debug.LogWarning("AudioManager or Jump sound not properly set up!");
+
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             isGrounded = false;
         }
