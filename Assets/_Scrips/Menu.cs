@@ -20,7 +20,7 @@ public class Menu : MonoBehaviour
             highScoreText.text = "Điểm Cao: " + highScore;
         }
         else
-        {
+        
             Debug.LogWarning("HighScoreText is not assigned in the Menu script!");
         }
 

@@ -9,7 +9,7 @@ public class AudioManager : MonoBehaviour
 	[SerializeField] AudioSource SFXSource;
 
 	[Header("Audio Clip")]
-	public AudioClip background, Attack, Die, Hit, Jump, 月牙天衝;
+	public AudioClip background, Attack, Die, Hit, Jump, 月牙天衝, takeDmg;
 
 	public void PlaySFX(AudioClip clip) {
 		if (SFXSource == null) {

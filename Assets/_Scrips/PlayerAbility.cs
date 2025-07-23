@@ -2,6 +2,14 @@ using UnityEngine;
 
 public class PlayerAbility : MonoBehaviour
 {
+
+	private bool canDash = true;
+	private bool isDashing;
+	private float dashingPower = 24f;
+	private float dashingTime = 0.2f;
+	private float dashingCooldown = 1f;
+	[SerializeField] private TrailRenderer tr; // Khoảng cách dashes
+
 	[SerializeField] public float attackRange = 1.5f; // Phạm vi tấn công
 	[Header("Skill Data")]
 	public SkillData fireballSkill; // Kéo ScriptableObject của skill vào đây
@@ -53,8 +61,7 @@ public class PlayerAbility : MonoBehaviour
 		GameObject fireball = Instantiate(fireballPrefab, firePoint.position, Quaternion.identity);
         Destroy(fireball, 2.5f);
 		Rigidbody2D rb = fireball.GetComponent<Rigidbody2D>();
-		if (rb != null)
-			rb.velocity = new Vector2(fireballSpeed * direction, 0f);
+		if (rb != null) rb.velocity = new Vector2(fireballSpeed * direction, 0f);
 		
 		// Optionally flip sprite if facing left
 		if (direction < 0)
