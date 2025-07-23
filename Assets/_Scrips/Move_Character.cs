@@ -4,17 +4,15 @@ public class Move_Character : MonoBehaviour
 {
     public float speed = 5f;
     public float jumpForce = 5f;
+    public float jumpCooldown = 0.1f; // Add cooldown time between jumps
+    private float jumpTimeStamp; // Track last jump time
 
     private Rigidbody2D rb;
     private Animator animator;
-
     private bool isGrounded;
-
     private Vector3 originalScale;
-
     private static Move_Character instance;
-
-    private AudioManager audioManager; // Move declaration inside the class
+    private AudioManager audioManager;
 
     void Awake()
     {
@@ -23,11 +21,7 @@ public class Move_Character : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        else
-        {
-            Destroy(gameObject);
-        }
-        // Initialize audioManager here
+        else Destroy(gameObject);
         audioManager = GameObject.FindGameObjectWithTag("Audio")?.GetComponent<AudioManager>();
     }
 
@@ -36,6 +30,7 @@ public class Move_Character : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         originalScale = transform.localScale;
+        jumpTimeStamp = -jumpCooldown; // Allow immediate first jump
     }
 
     void Update()
@@ -52,49 +47,32 @@ public class Move_Character : MonoBehaviour
         else if (moveX < 0)
             transform.localScale = new Vector3(-Mathf.Abs(originalScale.x), originalScale.y, originalScale.z);
 
-        // Nhảy
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        // Modified jump logic with cooldown
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded && Time.time >= jumpTimeStamp + jumpCooldown)
         {
             if (audioManager != null && audioManager.Jump != null)
-                audioManager.PlaySFX(audioManager.Jump); // Play jump sound if available
-            else
-                Debug.LogWarning("AudioManager or Jump sound not properly set up!");
+                audioManager.PlaySFX(audioManager.Jump);
+            else Debug.LogWarning("AudioManager or Jump sound not properly set up!");
 
+            rb.velocity = new Vector2(rb.velocity.x, 0f); // Reset vertical velocity before jump
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             isGrounded = false;
+            jumpTimeStamp = Time.time;
         }
 
-        // Cập nhật các biến cho Animator
-
-        // isRunning: khi có input trái/phải
+        // Update animator parameters
         animator.SetBool("isRunning", Mathf.Abs(moveX) > 0.01f);
-
         float verticalVelocity = rb.velocity.y;
-
-        // isJumping: đang đi lên (velocity y dương lớn)
         animator.SetBool("isJumping", verticalVelocity > 0.1f);
-
-        // isFalling: đang rơi xuống (velocity y âm)
         animator.SetBool("isFalling", verticalVelocity < -0.1f);
-
-        // isGrounded: thử giữ để animator có thể dùng nếu cần
         animator.SetBool("isGrounded", isGrounded);
     }
 
-    // Kiểm tra chạm đất
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            isGrounded = true;
-        }
+    private void OnCollisionEnter2D(Collision2D collision){
+        if (collision.gameObject.CompareTag("Ground")) isGrounded = true;
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            isGrounded = false;
-        }
+    private void OnCollisionExit2D(Collision2D collision){
+        if (collision.gameObject.CompareTag("Ground")) isGrounded = false;
     }
 }
