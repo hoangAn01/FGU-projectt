@@ -5,13 +5,8 @@ using static UnityEngine.RuleTile.TilingRuleOutput;
 public class PlayerAbility : MonoBehaviour
 {
 
-	private bool canDash = true;
-	private bool isDashing;
-	private float dashingPower = 24f;
-	private float dashingTime = 0.2f;
-	private float dashingCooldown = 1f;
+	
 
-	[SerializeField] private TrailRenderer tr; // Khoảng cách dashes
 
 	[SerializeField] public float attackRange = 1.5f; // Phạm vi tấn công
 	[Header("Skill Data")]
@@ -33,9 +28,6 @@ public class PlayerAbility : MonoBehaviour
 
 	void Update()
 	{
-		// Không cho phép dùng skill khi game đang pause
-		if (PauseManager.isGamePaused) return;
-
 		// Nhấn phím U để dùng chiêu đặc biệt
 		if (Input.GetKeyDown(KeyCode.U))
 		{
@@ -73,6 +65,9 @@ public class PlayerAbility : MonoBehaviour
 			fireball.transform.localScale = scale;
 		}
 	}
+	
+
+	
 
 	// Vẽ phạm vi tấn công trong Scene view
 	void OnDrawGizmosSelected()
