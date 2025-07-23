@@ -22,6 +22,9 @@ public class PlayerAbility : MonoBehaviour
 
 	void Update()
 	{
+		// Không cho phép dùng skill khi game đang pause
+		if (PauseManager.isGamePaused) return;
+
 		// Nhấn phím U để dùng chiêu đặc biệt
 		if (Input.GetKeyDown(KeyCode.U))
 		{

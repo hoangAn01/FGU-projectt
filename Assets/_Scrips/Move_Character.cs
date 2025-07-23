@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿﻿using UnityEngine;
 
 public class Move_Character : MonoBehaviour
 {
@@ -35,6 +35,9 @@ public class Move_Character : MonoBehaviour
 
     void Update()
     {
+        // Không cho phép di chuyển khi game đang pause
+        if (PauseManager.isGamePaused) return;
+
         // Lấy input đi trái/phải
         float moveX = Input.GetAxisRaw("Horizontal"); // -1, 0, 1
 

@@ -19,6 +19,9 @@ public class PlayerAttack : MonoBehaviour
 
 	void Update()
 	{
+		// Không cho phép tấn công khi game đang pause
+		if (PauseManager.isGamePaused) return;
+
 		// Nhấn phím J để đánh
 		if (Input.GetKeyDown(KeyCode.J)) Attack();
 	}
