@@ -42,7 +42,6 @@ public class PlayerAttack : MonoBehaviour
 			MiniBossHealth enemyHealth = enemy.GetComponent<MiniBossHealth>();
 			if (enemyHealth != null)
 				enemyHealth.TakeDamage(attackDamage);
-			
 		}
 	}
 
