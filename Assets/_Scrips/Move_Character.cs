@@ -1,6 +1,6 @@
-﻿using System.Collections;
-using UnityEngine;
 
+using System.Collections;
+using UnityEngine;
 public class Move_Character : MonoBehaviour
 {
 	public float speed = 5f;
@@ -48,6 +48,9 @@ public class Move_Character : MonoBehaviour
 
 	void Update()
 	{
+		// Không cho phép di chuyển khi game đang pause
+        if (PauseManager.isGamePaused) return;
+		
 		// Lấy input đi trái/phải
 		float moveX = Input.GetAxisRaw("Horizontal"); // -1, 0, 1
 
@@ -92,19 +95,7 @@ public class Move_Character : MonoBehaviour
 		// isGrounded: thử giữ để animator có thể dùng nếu cần
 		animator.SetBool("isGrounded", isGrounded);
 	}
-
-	//// Kiểm tra chạm đất
-	//private void OnCollisionEnter2D(Collision2D collision)
-	//{
-	//	if (collision.gameObject.CompareTag("Ground")) isGrounded = true;
-
-	//}
-
-	//private void OnCollisionExit2D(Collision2D collision)
-	//{
-	//	if (collision.gameObject.CompareTag("Ground")) isGrounded = false;
-
-	//}
+	
 	private void FixedUpdate()
 	{
 		if (isDashing) return;

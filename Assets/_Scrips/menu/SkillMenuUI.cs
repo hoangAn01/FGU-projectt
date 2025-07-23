@@ -6,7 +6,7 @@ public class SkillMenuUI : MonoBehaviour
 {
     [Header("UI References")]
     public TextMeshProUGUI skillStatusText;
-    public Image skillIconImage; // Thêm dòng này để tham chiếu đến UI Image
+    public Image skillIconImage;
 
     [Header("Skill Data")]
     public SkillData fireballSkill; // Kéo ScriptableObject của skill vào đây
