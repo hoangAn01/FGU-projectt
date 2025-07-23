@@ -41,6 +41,8 @@ public class PlayerAbility : MonoBehaviour
 
 	void SpecialAttack()
 	{
+		if (audioManager != null && audioManager.月牙天衝 != null)
+			audioManager.PlaySFX(audioManager.月牙天衝);
 		if (fireballPrefab == null || firePoint == null)
 		{
 			Debug.LogWarning("Fireball prefab or fire point not assigned!");
