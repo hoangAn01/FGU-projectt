@@ -3,6 +3,9 @@ using UnityEngine;
 public class PlayerAbility : MonoBehaviour
 {
 	[SerializeField] public float attackRange = 1.5f; // Phạm vi tấn công
+	[Header("Skill Data")]
+	public SkillData fireballSkill; // Kéo ScriptableObject của skill vào đây
+
 	[SerializeField] public float attackDamage = 80f; // Sát thương gây ra
 	public LayerMask enemyLayers;    // Layer của kẻ địch
 	public Animator animator;        // Animator để trigger animation đánh
@@ -20,7 +23,16 @@ public class PlayerAbility : MonoBehaviour
 	void Update()
 	{
 		// Nhấn phím U để dùng chiêu đặc biệt
-		if (Input.GetKeyDown(KeyCode.U)) SpecialAttack();
+		if (Input.GetKeyDown(KeyCode.U))
+		{
+			// Kiểm tra xem kỹ năng đã được mở khóa chưa
+			if (fireballSkill != null && fireballSkill.IsUnlocked())
+			{
+				SpecialAttack();
+			} else {
+				Debug.Log("Kỹ năng Chưởng Lửa đang bị khóa! Hãy đạt điểm cao hơn để mở.");
+			}
+		}
 	}
 
     [SerializeField] private GameObject fireballPrefab; // Prefab for the fireball (Special skill.png)

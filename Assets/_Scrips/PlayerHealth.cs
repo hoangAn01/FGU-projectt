@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
 using TMPro; // Thêm dòng này
@@ -16,6 +16,9 @@ public class PlayerHealth : MonoBehaviour
     public int score = 0;
 
     public TextMeshProUGUI scoreText; // Thêm biến này
+
+    [Header("Skill Unlocks")]
+    public SkillData fireballSkillToUnlock; // Kéo ScriptableObject của skill vào đây
 
     private void Start()
     {
@@ -59,8 +62,13 @@ public class PlayerHealth : MonoBehaviour
         {
             PlayerPrefs.SetInt("HighScore", score);
             Debug.Log("New High Score: " + score);
+
+            // --- LOGIC MỞ KHÓA KỸ NĂNG (đã cải tiến) ---
+            if (fireballSkillToUnlock != null && score >= fireballSkillToUnlock.requiredScore && !fireballSkillToUnlock.IsUnlocked())
+            {
+                fireballSkillToUnlock.Unlock();
+            }
         }
-        PlayerPrefs.Save(); // Đảm bảo dữ liệu được ghi vào đĩa ngay lập tức
 
         StartCoroutine(WaitForDeathAnimation());
     }

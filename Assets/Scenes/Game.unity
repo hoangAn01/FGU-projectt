@@ -927,6 +927,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   score: 0
   scoreText: {fileID: 1857847637}
+  fireballSkillToUnlock: {fileID: 11400000, guid: e508533a2f6564941ad2ad54f09189f9, type: 2}
 --- !u!114 &305886855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -940,7 +941,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackRange: 1.5
-  attackDamage: 100
+  attackDamage: 20
   enemyLayers:
     serializedVersion: 2
     m_Bits: 64
@@ -958,6 +959,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackRange: 1.5
+  fireballSkill: {fileID: 11400000, guid: e508533a2f6564941ad2ad54f09189f9, type: 2}
   attackDamage: 20
   enemyLayers:
     serializedVersion: 2
@@ -1746,7 +1748,7 @@ Transform:
   m_Children:
   - {fileID: 1860406993}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &896008179
 Animator:
@@ -1818,6 +1820,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c450efe61e0019b439d40237ae40d71b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainMenuPanel: {fileID: 0}
+  skillMenuPanel: {fileID: 0}
   highScoreText: {fileID: 0}
 --- !u!114 &923447207
 MonoBehaviour:
