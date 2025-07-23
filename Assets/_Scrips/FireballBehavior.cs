@@ -18,7 +18,7 @@ public class FireballBehavior : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             // Try to get the MiniBossHealth component (as used in PlayerAttack.cs)
-            MiniBossHealth enemyHealth = other.GetComponent<MiniBossHealth>();
+            IDamageable enemyHealth = other.GetComponent<IDamageable>();
             if (enemyHealth != null)
                 enemyHealth.TakeDamage(damage);
 

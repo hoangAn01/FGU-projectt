@@ -1,21 +1,25 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
-public class MiniBossHealth : MonoBehaviour, IDamageable
+public class SkeletonHealth : MonoBehaviour, IDamageable
 {
-    public float maxHealth = 100;
+    [Header("Health Settings")]
+    public float maxHealth = 50f;
     public float currentHealth;
     public Image healthBarFill; // Kéo Image Fill vào đây trong Inspector
 
+    public Animator animator;
     // Thêm biến prefab bình máu và tỉ lệ rơi
     public GameObject healthPotionPrefab;
     [Range(0f, 1f)]
-    public float dropRate = 0.5f; // 50% tỉ lệ rơi
+    public float dropRate = 0.1f; // 10% tỉ lệ rơi
 
     void Start()
     {
         currentHealth = maxHealth;
         UpdateHealthBar();
+        animator = GetComponent<Animator>();
     }
 
     public void TakeDamage(float amount)
@@ -38,19 +42,29 @@ public class MiniBossHealth : MonoBehaviour, IDamageable
     }
 
     void Die()
-    {
+    {   
+
+        Debug.Log("Player died!");
+        animator.SetTrigger("Dead");
+        StartCoroutine(WaitForDeathAnimation());
         // Tỉ lệ rơi bình máu
         if (healthPotionPrefab != null && Random.value < dropRate)
         {
             Instantiate(healthPotionPrefab, transform.position, Quaternion.identity);
         }
-        Destroy(gameObject);
-
         // Tìm player và cộng điểm
         PlayerHealth player = FindObjectOfType<PlayerHealth>();
         if (player != null)
         {
-            player.AddScore(10);
+            player.AddScore(1);
         }
+    }
+
+    private IEnumerator WaitForDeathAnimation()
+    {
+        // Giả sử animation chết dài 2 giây,
+        
+        yield return new WaitForSeconds(2f);
+        Destroy(gameObject);
     }
 }
