@@ -19,16 +19,12 @@ public class Menu : MonoBehaviour
             int highScore = PlayerPrefs.GetInt("HighScore", 0);
             highScoreText.text = "Điểm Cao: " + highScore;
         }
-        else
-        
-            Debug.LogWarning("HighScoreText is not assigned in the Menu script!");
-        }
+        else Debug.LogWarning("HighScoreText is not assigned in the Menu script!");
 
         // Đảm bảo trạng thái ban đầu của các panel là chính xác khi scene bắt đầu
         if (skillMenuPanel != null)
-        {
             skillMenuPanel.SetActive(false);
-        }
+        
     }
 
     public void play()

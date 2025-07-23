@@ -1,4 +1,6 @@
+using System.Collections;
 using UnityEngine;
+using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class PlayerAbility : MonoBehaviour
 {
@@ -8,6 +10,7 @@ public class PlayerAbility : MonoBehaviour
 	private float dashingPower = 24f;
 	private float dashingTime = 0.2f;
 	private float dashingCooldown = 1f;
+
 	[SerializeField] private TrailRenderer tr; // Khoảng cách dashes
 
 	[SerializeField] public float attackRange = 1.5f; // Phạm vi tấn công
@@ -34,17 +37,13 @@ public class PlayerAbility : MonoBehaviour
 		if (Input.GetKeyDown(KeyCode.U))
 		{
 			// Kiểm tra xem kỹ năng đã được mở khóa chưa
-			if (fireballSkill != null && fireballSkill.IsUnlocked())
-			{
-				SpecialAttack();
-			} else {
-				Debug.Log("Kỹ năng Chưởng Lửa đang bị khóa! Hãy đạt điểm cao hơn để mở.");
-			}
+			if (fireballSkill != null && fireballSkill.IsUnlocked()) SpecialAttack();
+			else Debug.Log("Kỹ năng Chưởng Lửa đang bị khóa! Hãy đạt điểm cao hơn để mở.");
 		}
 	}
 
     [SerializeField] private GameObject fireballPrefab; // Prefab for the fireball (Special skill.png)
-    [SerializeField] private Transform firePoint; // Where the fireball spawns from
+    [SerializeField] private UnityEngine.Transform firePoint; // Where the fireball spawns from
     public float fireballSpeed = 1300f; // Speed of the fireball
 
 	void SpecialAttack()
