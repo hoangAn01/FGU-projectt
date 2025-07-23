@@ -1,4 +1,3 @@
-
 using System.Collections;
 using UnityEngine;
 public class Move_Character : MonoBehaviour
@@ -49,7 +48,7 @@ public class Move_Character : MonoBehaviour
 	void Update()
 	{
 		// Không cho phép di chuyển khi game đang pause
-        if (PauseManager.isGamePaused) return;
+		if (PauseManager.isGamePaused) return;
 		
 		// Lấy input đi trái/phải
 		float moveX = Input.GetAxisRaw("Horizontal"); // -1, 0, 1
@@ -115,5 +114,16 @@ public class Move_Character : MonoBehaviour
 		isDashing = false;
 		yield return new WaitForSeconds(dashingCooldown);
 		canDash = true;
+	}
+
+	private void OnCollisionEnter2D(Collision2D collision)
+	{
+		if (collision.gameObject.CompareTag("Ground")) isGrounded = true;
+	}
+
+	private void OnCollisionExit2D(Collision2D collision)
+	{
+		if (collision.gameObject.CompareTag("Ground"))
+			isGrounded = false;
 	}
 }
