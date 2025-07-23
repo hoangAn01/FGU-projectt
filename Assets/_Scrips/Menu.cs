@@ -21,7 +21,6 @@ public class Menu : MonoBehaviour
 		}
 		else Debug.LogWarning("HighScoreText is not assigned in the Menu script!");
 
-
 		// Đảm bảo trạng thái ban đầu của các panel là chính xác khi scene bắt đầu
 		if (skillMenuPanel != null)
 			skillMenuPanel.SetActive(false);

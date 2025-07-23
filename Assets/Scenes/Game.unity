@@ -945,7 +945,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   jumpForce: 8
-  jumpCooldown: 0.1
+  tr: {fileID: 0}
 --- !u!114 &305886854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -995,6 +995,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d16252b223d4c749834fbaf6f9fd484, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tr: {fileID: 0}
   attackRange: 1.5
   fireballSkill: {fileID: 11400000, guid: e508533a2f6564941ad2ad54f09189f9, type: 2}
   attackDamage: 20
@@ -1643,6 +1644,7 @@ MonoBehaviour:
   Hit: {fileID: 0}
   Jump: {fileID: 8300000, guid: d81a2cc55730e2d4bbe8ad9d03784bed, type: 3}
   "\u6708\u7259\u5929\u885D": {fileID: 0}
+  takeDmg: {fileID: 8300000, guid: c336310c21a92c64fadcbee16f90617c, type: 3}
 --- !u!4 &730069060
 Transform:
   m_ObjectHideFlags: 0

@@ -64,8 +64,9 @@ public class PlayerHealth : MonoBehaviour
 			// --- LOGIC MỞ KHÓA KỸ NĂNG (đã cải tiến) ---
 			if (fireballSkillToUnlock != null && score >= fireballSkillToUnlock.requiredScore && !fireballSkillToUnlock.IsUnlocked())
 				fireballSkillToUnlock.Unlock();
-			
 		}
+		PlayerPrefs.Save(); // Đảm bảo dữ liệu được ghi vào đĩa ngay lập tức
+
 		StartCoroutine(WaitForDeathAnimation());
 	}
 
