@@ -5,8 +5,13 @@ using static UnityEngine.RuleTile.TilingRuleOutput;
 public class PlayerAbility : MonoBehaviour
 {
 
-	
 
+	private bool canDash = true;
+	private bool isDashing;
+	private float dashingPower = 24f;
+	private float dashingTime = 0.2f;
+	private float dashingCooldown = 1f;
+	[SerializeField] private TrailRenderer tr; // Khoảng cách dashes
 
 	[SerializeField] public float attackRange = 1.5f; // Phạm vi tấn công
 	[Header("Skill Data")]

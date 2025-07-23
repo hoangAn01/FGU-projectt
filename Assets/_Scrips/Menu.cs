@@ -10,7 +10,7 @@ public class Menu : MonoBehaviour
 	public GameObject mainMenuPanel; // Kéo Panel của menu chính vào đây
 	public GameObject skillMenuPanel; // Kéo Panel của menu kỹ năng vào đây
 	public TextMeshProUGUI highScoreText; // Tham chiếu đến UI Text để hiện High Score
-
+	
 	void Start()
 	{
 		if (highScoreText != null)
@@ -20,6 +20,7 @@ public class Menu : MonoBehaviour
 			highScoreText.text = "Điểm Cao: " + highScore;
 		}
 		else Debug.LogWarning("HighScoreText is not assigned in the Menu script!");
+
 
 		// Đảm bảo trạng thái ban đầu của các panel là chính xác khi scene bắt đầu
 		if (skillMenuPanel != null)
