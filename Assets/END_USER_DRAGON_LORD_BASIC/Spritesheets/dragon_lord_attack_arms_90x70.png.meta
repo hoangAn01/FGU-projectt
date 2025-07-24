@@ -1,0 +1,466 @@
+fileFormatVersion: 2
+guid: f02ff2a71a5621d4d8f96fde2f7a741c
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 50
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dragon_lord_attack_arms_90x70_0
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 5
+        width: 38
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 820a486d2283a2a4a803a504aa811cd7
+      internalID: -795652318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_lord_attack_arms_90x70_1
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 5
+        width: 44
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2721b0db9837cc4b8ede90144cb296c
+      internalID: 944706281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_lord_attack_arms_90x70_2
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 5
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b3a25f0815a39545bd3bd61d8ae4ef8
+      internalID: -760844654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_lord_attack_arms_90x70_3
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 5
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3b46f0b6bc2f1849b79a3435369c514
+      internalID: -140580183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_lord_attack_arms_90x70_4
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 5
+        width: 73
+        height: 44
+      alignment: 9
+      pivot: {x: 0.35, y: 0.56}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cb1d085d17b1914480007dfa1210461
+      internalID: 874949592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_lord_attack_arms_90x70_5
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 5
+        width: 65
+        height: 47
+      alignment: 9
+      pivot: {x: 0.36, y: 0.53}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aef176e16deea8d44abf4991bb46a010
+      internalID: -1208227653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_lord_attack_arms_90x70_6
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 5
+        width: 48
+        height: 46
+      alignment: 9
+      pivot: {x: 0.5, y: 0.54}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07aceb2932689094999981ca233fbfe7
+      internalID: -880597852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_lord_attack_arms_90x70_7
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 5
+        width: 61
+        height: 52
+      alignment: 9
+      pivot: {x: 0.38389912, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66f3dd6a0eda20b44a3237b6245dfea8
+      internalID: 462067944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_lord_attack_arms_90x70_8
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 5
+        width: 67
+        height: 53
+      alignment: 9
+      pivot: {x: 0.29, y: 0.47}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 462d1b367f4ff8e4ab6eecb9c9132331
+      internalID: -205810299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_lord_attack_arms_90x70_9
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 5
+        width: 58
+        height: 48
+      alignment: 9
+      pivot: {x: 0.36, y: 0.52}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4c6a77491af465459a66cf12a599c52
+      internalID: -1518021011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_lord_attack_arms_90x70_10
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 5
+        width: 50
+        height: 47
+      alignment: 9
+      pivot: {x: 0.44, y: 0.53}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 116692be2f72cd34293058b844b44b03
+      internalID: -299222535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_lord_attack_arms_90x70_11
+      rect:
+        serializedVersion: 2
+        x: 1014
+        y: 5
+        width: 42
+        height: 45
+      alignment: 9
+      pivot: {x: 0.5, y: 0.55}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98eca7f1e8ddcbf4dbd8baf4692c2969
+      internalID: -1204576244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_lord_attack_arms_90x70_12
+      rect:
+        serializedVersion: 2
+        x: 1102
+        y: 5
+        width: 34
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d5fa9ae6e8468e4fbe5f446f3facdb5
+      internalID: -651475458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_lord_attack_arms_90x70_13
+      rect:
+        serializedVersion: 2
+        x: 1186
+        y: 5
+        width: 57
+        height: 55
+      alignment: 9
+      pivot: {x: 0.37, y: 0.45}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73b2a2f281661664595eff627ede8899
+      internalID: -1484445091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_lord_attack_arms_90x70_15
+      rect:
+        serializedVersion: 2
+        x: 1279
+        y: 5
+        width: 49
+        height: 57
+      alignment: 9
+      pivot: {x: 0.4, y: 0.43}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 575f16e56fa248c4d8543b312600cbe5
+      internalID: 1360974780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_lord_attack_arms_90x70_16
+      rect:
+        serializedVersion: 2
+        x: 1369
+        y: 5
+        width: 47
+        height: 49
+      alignment: 9
+      pivot: {x: 0.4, y: 0.51}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a470287a6af8f534ba6528b0461626c0
+      internalID: 1477578327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      dragon_lord_attack_arms_90x70_0: -795652318
+      dragon_lord_attack_arms_90x70_1: 944706281
+      dragon_lord_attack_arms_90x70_10: -299222535
+      dragon_lord_attack_arms_90x70_11: -1204576244
+      dragon_lord_attack_arms_90x70_12: -651475458
+      dragon_lord_attack_arms_90x70_13: -1484445091
+      dragon_lord_attack_arms_90x70_14: -1628221775
+      dragon_lord_attack_arms_90x70_15: 1360974780
+      dragon_lord_attack_arms_90x70_16: 1477578327
+      dragon_lord_attack_arms_90x70_17: -2083830497
+      dragon_lord_attack_arms_90x70_18: -1568576739
+      dragon_lord_attack_arms_90x70_2: -760844654
+      dragon_lord_attack_arms_90x70_3: -140580183
+      dragon_lord_attack_arms_90x70_4: 874949592
+      dragon_lord_attack_arms_90x70_5: -1208227653
+      dragon_lord_attack_arms_90x70_6: -880597852
+      dragon_lord_attack_arms_90x70_7: 462067944
+      dragon_lord_attack_arms_90x70_8: -205810299
+      dragon_lord_attack_arms_90x70_9: -1518021011
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

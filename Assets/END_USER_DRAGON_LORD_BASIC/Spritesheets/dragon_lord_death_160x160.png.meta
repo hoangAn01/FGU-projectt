@@ -1,0 +1,904 @@
+fileFormatVersion: 2
+guid: 7b4ef3d9abc9593409da5f61e5fe34c7
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 50
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dragon_lord_death_160x160_8
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 5
+        width: 118
+        height: 148
+      alignment: 9
+      pivot: {x: 0.5, y: 0.169}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75127bc0e6d30324d98207c2848204f0
+      internalID: 550287716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_lord_death_160x160_9
+      rect:
+        serializedVersion: 2
+        x: 1287
+        y: 5
+        width: 145
+        height: 150
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1720761977168d4ebe72e4cb882ccaf
+      internalID: -1673370713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_lord_death_160x160_10
+      rect:
+        serializedVersion: 2
+        x: 1447
+        y: 5
+        width: 145
+        height: 152
+      alignment: 9
+      pivot: {x: 0.5, y: 0.171}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 081ed3e7169d16043a803c10b229f9fb
+      internalID: -15850275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_lord_death_160x160_11
+      rect:
+        serializedVersion: 2
+        x: 1607
+        y: 5
+        width: 145
+        height: 153
+      alignment: 9
+      pivot: {x: 0.5, y: 0.17}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78c9e63a4b592a84aa9a158198dc3d76
+      internalID: -1654355588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_lord_death_160x160_12
+      rect:
+        serializedVersion: 2
+        x: 1767
+        y: 5
+        width: 145
+        height: 132
+      alignment: 9
+      pivot: {x: 0.5, y: 0.193}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9384d425a2514243b6e83e41ec0075a
+      internalID: 1067027257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_lord_death_160x160_13
+      rect:
+        serializedVersion: 2
+        x: 1931
+        y: 5
+        width: 137
+        height: 132
+      alignment: 9
+      pivot: {x: 0.5, y: 0.194}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce571acfafb7c4f43ad6bc79f20f102c
+      internalID: 392575654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_lord_death_160x160_14
+      rect:
+        serializedVersion: 2
+        x: 2096
+        y: 5
+        width: 127
+        height: 130
+      alignment: 9
+      pivot: {x: 0.5, y: 0.194}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6471bfda9738f1141a1e936358ee9b0e
+      internalID: -94867673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_lord_death_160x160_15
+      rect:
+        serializedVersion: 2
+        x: 2267
+        y: 5
+        width: 105
+        height: 133
+      alignment: 9
+      pivot: {x: 0.5, y: 0.193}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bc633d9ed7958e4e8f55ace1a58ce73
+      internalID: 1761124525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_lord_death_160x160_16
+      rect:
+        serializedVersion: 2
+        x: 2435
+        y: 5
+        width: 89
+        height: 136
+      alignment: 9
+      pivot: {x: 0.5, y: 0.19}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 867c7114828ced64589d3acde0dad345
+      internalID: 1625777327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_lord_death_160x160_17
+      rect:
+        serializedVersion: 2
+        x: 2604
+        y: 5
+        width: 70
+        height: 137
+      alignment: 9
+      pivot: {x: 0.5, y: 0.19}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a34f5472d31723a4891ac1550a5b04e5
+      internalID: -1632417281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_lord_death_160x160_18
+      rect:
+        serializedVersion: 2
+        x: 2764
+        y: 5
+        width: 71
+        height: 135
+      alignment: 9
+      pivot: {x: 0.5, y: 0.19}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca569c2e4e67f264ca8e56e2b16a1ea2
+      internalID: 1396308959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_lord_death_160x160_19
+      rect:
+        serializedVersion: 2
+        x: 2928
+        y: 5
+        width: 61
+        height: 133
+      alignment: 9
+      pivot: {x: 0.5, y: 0.19}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9715376567e7d244196e9f61f0df9c04
+      internalID: -1311193759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_lord_death_160x160_20
+      rect:
+        serializedVersion: 2
+        x: 3089
+        y: 5
+        width: 60
+        height: 129
+      alignment: 9
+      pivot: {x: 0.5, y: 0.197}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 542d072b4c1e937438235210a9547f5b
+      internalID: 131513216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_lord_death_160x160_7
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 4
+        width: 119
+        height: 109
+      alignment: 9
+      pivot: {x: 0.5, y: 0.237}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f4ec5f6a476b934d8d637639f05cd83
+      internalID: 273639248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_lord_death_160x160_21
+      rect:
+        serializedVersion: 2
+        x: 3248
+        y: 5
+        width: 59
+        height: 117
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2243729}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f436617b65ab0044180551e2ca25e893
+      internalID: -1708108484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_lord_death_160x160_23
+      rect:
+        serializedVersion: 2
+        x: 3575
+        y: 5
+        width: 57
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2581373}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0efa833daa06bf84bb425c58f014e6e0
+      internalID: 946987050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_lord_death_160x160_22
+      rect:
+        serializedVersion: 2
+        x: 3409
+        y: 5
+        width: 61
+        height: 98
+      alignment: 9
+      pivot: {x: 0.5, y: 0.26441917}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ecd1ca6961ad4e48825df5301e46cb1
+      internalID: 949341604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_lord_death_160x160_28
+      rect:
+        serializedVersion: 2
+        x: 4380
+        y: 5
+        width: 50
+        height: 99
+      alignment: 9
+      pivot: {x: 0.5, y: 0.254}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 335d1a2eb082e3e46b9a6a448d87113e
+      internalID: 1030143178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_lord_death_160x160_24
+      rect:
+        serializedVersion: 2
+        x: 3739
+        y: 4
+        width: 51
+        height: 118
+      alignment: 9
+      pivot: {x: 0.5, y: 0.22826152}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0702b8408198964b8290c8ea7155ceb
+      internalID: -2037633717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_lord_death_160x160_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 5
+        width: 38
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a895f840fe723b499206fa4f8ac6ccf
+      internalID: -1916939653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_lord_death_160x160_2
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 5
+        width: 46
+        height: 52
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27e3b862ef355364e93ae6e19919b2a0
+      internalID: -1649905045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_lord_death_160x160_3
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 5
+        width: 46
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a47e7175eabe774d9ae60abf8c51efc
+      internalID: -903968923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_lord_death_160x160_4
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 5
+        width: 46
+        height: 54
+      alignment: 9
+      pivot: {x: 0.5, y: 0.46}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f45c064e2f999e47a4bbbefb2962df2
+      internalID: 634476451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_lord_death_160x160_5
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 5
+        width: 55
+        height: 52
+      alignment: 9
+      pivot: {x: 0.5, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ce222364087a7a488cc335ff78070b4
+      internalID: 751117372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_lord_death_160x160_6
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 5
+        width: 45
+        height: 43
+      alignment: 9
+      pivot: {x: 0.5, y: 0.57}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d860cc656e5b28498e95d6efb5a73e6
+      internalID: -90805642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_lord_death_160x160_25
+      rect:
+        serializedVersion: 2
+        x: 3897
+        y: 5
+        width: 47
+        height: 126
+      alignment: 9
+      pivot: {x: 0.5, y: 0.20479707}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bedd2981d80a8284d92824039665d45e
+      internalID: -2042099374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_lord_death_160x160_26
+      rect:
+        serializedVersion: 2
+        x: 4059
+        y: 5
+        width: 45
+        height: 126
+      alignment: 9
+      pivot: {x: 0.5, y: 0.20479707}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2656ce3fe7e43b4291e8e399c917b54
+      internalID: 1790165347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_lord_death_160x160_27
+      rect:
+        serializedVersion: 2
+        x: 4222
+        y: 5
+        width: 43
+        height: 127
+      alignment: 9
+      pivot: {x: 0.5, y: 0.21144968}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 938a33e49723eeb40a5b0ded577fc16d
+      internalID: -1420235991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_lord_death_160x160_29
+      rect:
+        serializedVersion: 2
+        x: 4549
+        y: 5
+        width: 47
+        height: 14
+      alignment: 9
+      pivot: {x: 0.4, y: 1.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5fa84298df591d47ba278c7c54a105a
+      internalID: 710131844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_lord_death_160x160_30
+      rect:
+        serializedVersion: 2
+        x: 4709
+        y: 5
+        width: 47
+        height: 14
+      alignment: 9
+      pivot: {x: 0.4, y: 1.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 315984aff118af64e83533e3ed62612e
+      internalID: -1702610736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_lord_death_160x160_31
+      rect:
+        serializedVersion: 2
+        x: 4869
+        y: 5
+        width: 47
+        height: 14
+      alignment: 9
+      pivot: {x: 0.4, y: 1.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0306c0054b216964b9d89f774adfc1f2
+      internalID: 275010439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_lord_death_160x160_32
+      rect:
+        serializedVersion: 2
+        x: 5029
+        y: 5
+        width: 47
+        height: 14
+      alignment: 9
+      pivot: {x: 0.4, y: 1.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ed7a140af9d029459bc7a32bd1ba393
+      internalID: 153127203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_lord_death_160x160_33
+      rect:
+        serializedVersion: 2
+        x: 5189
+        y: 5
+        width: 47
+        height: 14
+      alignment: 9
+      pivot: {x: 0.4, y: 1.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f027674104e14f4099bdc97355deede
+      internalID: 1263067175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_lord_death_160x160_34
+      rect:
+        serializedVersion: 2
+        x: 5349
+        y: 5
+        width: 47
+        height: 14
+      alignment: 9
+      pivot: {x: 0.4, y: 1.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53a1853ebe59f454a8831d42800d6841
+      internalID: -1755273552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_lord_death_160x160_35
+      rect:
+        serializedVersion: 2
+        x: 5509
+        y: 5
+        width: 47
+        height: 14
+      alignment: 9
+      pivot: {x: 0.4, y: 1.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45b9d1c427fa6494fabff374605b1285
+      internalID: -1858432677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_lord_death_160x160_36
+      rect:
+        serializedVersion: 2
+        x: 5669
+        y: 5
+        width: 47
+        height: 14
+      alignment: 9
+      pivot: {x: 0.4, y: 1.85}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86349190d790fcf4393ce8db2eac9b39
+      internalID: -578088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      dragon_lord_death_160x160_1: -1916939653
+      dragon_lord_death_160x160_10: -15850275
+      dragon_lord_death_160x160_11: -1654355588
+      dragon_lord_death_160x160_12: 1067027257
+      dragon_lord_death_160x160_13: 392575654
+      dragon_lord_death_160x160_14: -94867673
+      dragon_lord_death_160x160_15: 1761124525
+      dragon_lord_death_160x160_16: 1625777327
+      dragon_lord_death_160x160_17: -1632417281
+      dragon_lord_death_160x160_18: 1396308959
+      dragon_lord_death_160x160_19: -1311193759
+      dragon_lord_death_160x160_2: -1649905045
+      dragon_lord_death_160x160_20: 131513216
+      dragon_lord_death_160x160_21: -1708108484
+      dragon_lord_death_160x160_22: 949341604
+      dragon_lord_death_160x160_23: 946987050
+      dragon_lord_death_160x160_24: -2037633717
+      dragon_lord_death_160x160_25: -2042099374
+      dragon_lord_death_160x160_26: 1790165347
+      dragon_lord_death_160x160_27: -1420235991
+      dragon_lord_death_160x160_28: 1030143178
+      dragon_lord_death_160x160_29: 710131844
+      dragon_lord_death_160x160_3: -903968923
+      dragon_lord_death_160x160_30: -1702610736
+      dragon_lord_death_160x160_31: 275010439
+      dragon_lord_death_160x160_32: 153127203
+      dragon_lord_death_160x160_33: 1263067175
+      dragon_lord_death_160x160_34: -1755273552
+      dragon_lord_death_160x160_35: -1858432677
+      dragon_lord_death_160x160_36: -578088
+      dragon_lord_death_160x160_37: 518078481
+      dragon_lord_death_160x160_4: 634476451
+      dragon_lord_death_160x160_5: 751117372
+      dragon_lord_death_160x160_6: -90805642
+      dragon_lord_death_160x160_7: 273639248
+      dragon_lord_death_160x160_8: 550287716
+      dragon_lord_death_160x160_9: -1673370713
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
