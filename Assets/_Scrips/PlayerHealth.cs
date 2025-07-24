@@ -1,4 +1,4 @@
-﻿﻿using UnityEngine;
+﻿﻿﻿﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
 using TMPro; // Thêm dòng này
@@ -63,7 +63,11 @@ public class PlayerHealth : MonoBehaviour
 
 			// --- LOGIC MỞ KHÓA KỸ NĂNG (đã cải tiến) ---
 			if (fireballSkillToUnlock != null && score >= fireballSkillToUnlock.requiredScore && !fireballSkillToUnlock.IsUnlocked())
+			{
 				fireballSkillToUnlock.Unlock();
+				// Đặt một "cờ" để màn hình PlayAgain biết và hiển thị thông báo
+				PlayerPrefs.SetString("JustUnlockedSkillName", fireballSkillToUnlock.skillName);
+			}
 		}
 		PlayerPrefs.Save(); // Đảm bảo dữ liệu được ghi vào đĩa ngay lập tức
 

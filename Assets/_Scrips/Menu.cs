@@ -62,6 +62,8 @@ public class Menu : MonoBehaviour
 		PlayerPrefs.DeleteKey("HighScore");
 		// Xóa kỹ năng đã mở khóa (quan trọng!)
 		PlayerPrefs.DeleteKey("FireballUnlocked");
+		// Xóa cờ thông báo (nếu có)
+		PlayerPrefs.DeleteKey("JustUnlockedSkillName");
 		PlayerPrefs.Save(); // Lưu thay đổi
 
 		// Cập nhật lại text trên màn hình

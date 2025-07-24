@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using static UnityEngine.RuleTile.TilingRuleOutput;
+using UnityEngine.UI;
 
 namespace Game // S3903: Added named namespace
 {
@@ -8,7 +9,13 @@ namespace Game // S3903: Added named namespace
 	{
 		[SerializeField] public float attackRange = 1.5f; // Phạm vi tấn công
 		[Header("Skill Data")]
-		public SkillData fireballSkill; // Kéo ScriptableObject của skill vào đây
+		public SkillData fireballSkill;
+
+		[Header("UI")]
+		[Tooltip("Kéo GameObject cha chứa toàn bộ UI của skill vào đây")]
+		public GameObject skillUiParent;
+		[Tooltip("Kéo Image dùng để hiển thị cooldown (loại Filled)")]
+		public Image cooldownImage;
 
 		[SerializeField] public float attackDamage = 80f; // Sát thương gây ra
 		public LayerMask enemyLayers;    // Layer của kẻ địch
@@ -31,6 +38,18 @@ namespace Game // S3903: Added named namespace
 		void Start()
 		{
 			animator = GetComponent<Animator>();
+			// Kiểm tra và cập nhật UI khi bắt đầu game
+			if (skillUiParent != null)
+			{
+				bool isUnlocked = fireballSkill != null && fireballSkill.IsUnlocked();
+				skillUiParent.SetActive(isUnlocked);
+
+				if (isUnlocked && cooldownImage != null)
+				{
+					// Bắt đầu với skill đã sẵn sàng (không có hiệu ứng cooldown)
+					cooldownImage.fillAmount = 0;
+				}
+			}
 		}
 
 		void Update()
@@ -79,7 +98,25 @@ namespace Game // S3903: Added named namespace
 		private IEnumerator SpecialAttackCooldown()
 		{
 			canUseSpecial = false;
-			yield return new WaitForSeconds(specialCooldown);
+
+			if (cooldownImage != null)
+			{
+				float elapsedTime = 0f;
+				cooldownImage.fillAmount = 1f; // Bắt đầu lấp đầy hình ảnh
+
+				while (elapsedTime < specialCooldown)
+				{
+					elapsedTime += Time.deltaTime;
+					// Giảm dần fillAmount từ 1 về 0
+					cooldownImage.fillAmount = 1.0f - (elapsedTime / specialCooldown);
+					yield return null; // Chờ frame tiếp theo
+				}
+
+				cooldownImage.fillAmount = 0f; // Đảm bảo kết thúc chính xác ở 0
+			}
+			else
+				yield return new WaitForSeconds(specialCooldown); // Fallback nếu không có UI
+			
 			canUseSpecial = true;
 		}
 
