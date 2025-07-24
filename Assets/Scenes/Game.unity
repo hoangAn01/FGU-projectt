@@ -808,6 +808,7 @@ Transform:
   - {fileID: 538074435}
   - {fileID: 2017217403}
   - {fileID: 1619972212}
+  - {fileID: 559191909}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0.69, y: 0, z: 0}
@@ -995,7 +996,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d16252b223d4c749834fbaf6f9fd484, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tr: {fileID: 0}
   attackRange: 1.5
   fireballSkill: {fileID: 11400000, guid: e508533a2f6564941ad2ad54f09189f9, type: 2}
   attackDamage: 200
@@ -1484,13 +1484,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 559191907}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.7309224, y: -0.3325321, z: 1087.3735}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.006021381, y: -0, z: -0, w: 0.99998194}
+  m_LocalPosition: {x: 10.864156, y: 32.424934, z: 1087.2971}
+  m_LocalScale: {x: 2, y: 1.9997101, z: 1.0000726}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_Father: {fileID: 305886848}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &572459165
 GameObject:
@@ -3665,7 +3665,7 @@ GameObject:
   - component: {fileID: 2013513654}
   m_Layer: 5
   m_Name: PauseMenuPanel
-  m_TagString: Untagged
+  m_TagString: PauseMenuUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

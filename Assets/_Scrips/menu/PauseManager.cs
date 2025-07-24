@@ -3,24 +3,29 @@ using UnityEngine.SceneManagement;
 
 public class PauseManager : MonoBehaviour
 {
-    public static PauseManager Instance { get; private set; }
+    public static PauseManager Instance { get; private set; }// duy nhất ngã độc tôn
 
     // Biến static để các script khác có thể kiểm tra game có đang pause không
-    public static bool isGamePaused = false;
+    public static bool isGamePaused { get; private set; } 
+     // Biến tĩnh status game pause 
+     // mở rộng để các script khác có thể kiểm tra trạng thái pause
+     
 
     [Header("UI")]
+    [Tooltip("Kéo Panel chứa menu pause vào đây.")]
     public GameObject pauseMenuUI; // Panel chứa menu pause
 
     private void Awake()
     {
-        if (Instance == null)
+        // Singleton pattern cho scene hiện tại
+        if (Instance != null && Instance != this)
         {
-            Instance = this;
-            DontDestroyOnLoad(gameObject); // Giữ lại đối tượng này khi chuyển scene
+            Debug.LogWarning("Một PauseManager khác đã tồn tại. Hủy đối tượng mới.");
+            Destroy(gameObject);
         }
         else
         {
-            Destroy(gameObject); // Hủy bản thân nếu đã có một instance khác
+            Instance = this;
         }
     }
 
@@ -31,6 +36,7 @@ public class PauseManager : MonoBehaviour
         {
             pauseMenuUI.SetActive(false);
         }
+        // Reset trạng thái khi bắt đầu scene
         isGamePaused = false;
         Time.timeScale = 1f;
     }
@@ -38,16 +44,17 @@ public class PauseManager : MonoBehaviour
     void Update()
     {
         // Dùng phím Escape để pause/resume nhanh
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape)) TogglePause();
+    }
+
+    
+    private void OnDestroy()
+    {
+        if (Instance == this)
         {
-            if (isGamePaused)
-            {
-                Resume();
-            }
-            else
-            {
-                Pause();
-            }
+            // Quan trọng: Đảm bảo time scale được reset nếu game bị pause khi chuyển scene
+            Time.timeScale = 1f;
+            Instance = null;
         }
     }
 
@@ -65,11 +72,16 @@ public class PauseManager : MonoBehaviour
         isGamePaused = true;
     }
 
+    public void TogglePause()
+    {
+        if (isGamePaused) Resume();
+        else Pause();
+    }
+
     public void LoadMenu()
     {
-        // Quan trọng: Luôn reset time scale trước khi chuyển scene
+        // Quan trọng: Reset time scale trước khi chuyển scene
         Time.timeScale = 1f;
-        isGamePaused = false;
         SceneManager.LoadScene("menu");
     }
 }
