@@ -998,7 +998,7 @@ MonoBehaviour:
   tr: {fileID: 0}
   attackRange: 1.5
   fireballSkill: {fileID: 11400000, guid: e508533a2f6564941ad2ad54f09189f9, type: 2}
-  attackDamage: 20
+  attackDamage: 200
   enemyLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1639,11 +1639,11 @@ MonoBehaviour:
   musicSource: {fileID: 164727484}
   SFXSource: {fileID: 947225011}
   background: {fileID: 0}
-  Attack: {fileID: 8300000, guid: 2d14d9f743f9f214aac29dc6073c9669, type: 3}
+  Attack: {fileID: 8300000, guid: b596fe1b040e40a46b20e8bce93f55e5, type: 3}
   Die: {fileID: 0}
   Hit: {fileID: 0}
   Jump: {fileID: 8300000, guid: d81a2cc55730e2d4bbe8ad9d03784bed, type: 3}
-  "\u6708\u7259\u5929\u885D": {fileID: 0}
+  "\u6708\u7259\u5929\u885D": {fileID: 8300000, guid: 2d14d9f743f9f214aac29dc6073c9669, type: 3}
   takeDmg: {fileID: 8300000, guid: c336310c21a92c64fadcbee16f90617c, type: 3}
 --- !u!4 &730069060
 Transform:

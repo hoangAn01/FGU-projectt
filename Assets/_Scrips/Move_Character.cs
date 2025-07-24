@@ -30,10 +30,8 @@ public class Move_Character : MonoBehaviour
 			instance = this;
 			DontDestroyOnLoad(gameObject);
 		}
-		else
-		{
-			Destroy(gameObject);
-		}
+		else Destroy(gameObject);
+		
 		// Initialize audioManager here
 		audioManager = GameObject.FindGameObjectWithTag("Audio")?.GetComponent<AudioManager>();
 	}
@@ -67,6 +65,7 @@ public class Move_Character : MonoBehaviour
 		// Nhảy
 		if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
 		{
+			Debug.Log("Jump button pressed");
 			if (audioManager != null && audioManager.Jump != null)
 				audioManager.PlaySFX(audioManager.Jump); // Play jump sound if available
 			else Debug.LogWarning("AudioManager or Jump sound not properly set up!");
