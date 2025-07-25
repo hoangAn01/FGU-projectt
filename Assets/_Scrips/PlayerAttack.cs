@@ -43,9 +43,13 @@ public class PlayerAttack : MonoBehaviour
 		{
 			// Gây sát thương cho kẻ địch (giả sử kẻ địch có script PlayerHealth hoặc EnemyHealth)
 			MiniBossHealth enemyHealth = enemy.GetComponent<MiniBossHealth>();
-			if (enemyHealth != null)
-				enemyHealth.TakeDamage(attackDamage);
-		}
+            if (enemyHealth != null)
+                enemyHealth.TakeDamage(attackDamage);
+
+            BoarHealth boar = enemy.GetComponent<BoarHealth>();
+            if (boar != null)
+                boar.TakeDamage(attackDamage);
+        }
 	}
 
 	// Vẽ phạm vi tấn công trong Scene view
