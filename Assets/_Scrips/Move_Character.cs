@@ -17,12 +17,13 @@ public class Move_Character : MonoBehaviour
 	private AudioManager audioManager; // Move declaration inside the class
 	private bool canDash = true;
 	private bool isDashing;
-	private float dashingPower = 24f;
-	private float dashingTime = 0.2f;
+	private float dashingPower = 40f;
+	private float dashingTime = 1f;
 	private float dashingCooldown = 1f;
 
 	[SerializeField] private TrailRenderer tr; // Khoảng cách dashes
-
+	[SerializeField] private Joystick joystick;
+	
 	void Awake()
 	{
 		if (instance == null)
@@ -34,6 +35,7 @@ public class Move_Character : MonoBehaviour
 		
 		// Initialize audioManager here
 		audioManager = GameObject.FindGameObjectWithTag("Audio")?.GetComponent<AudioManager>();
+		tr = GetComponent<TrailRenderer>();
 	}
 
 	void Start()
@@ -50,7 +52,11 @@ public class Move_Character : MonoBehaviour
 		
 		// Lấy input đi trái/phải
 		float moveX = Input.GetAxisRaw("Horizontal"); // -1, 0, 1
-
+		if (joystick != null && joystick.Horizontal != 0)
+		{
+			moveX = joystick.Horizontal;
+		}
+	
 		// Di chuyển nhân vật
 		rb.velocity = new Vector2(moveX * speed, rb.velocity.y);
 
@@ -74,7 +80,7 @@ public class Move_Character : MonoBehaviour
 			isGrounded = false;
 		}
 		
-		if (Input.GetKeyDown(KeyCode.L) && canDash)
+		if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
 			StartCoroutine(Dash());
 
 		// Cập nhật các biến cho Animator
@@ -106,9 +112,19 @@ public class Move_Character : MonoBehaviour
 		float originalGravity = rb.gravityScale;
 		rb.gravityScale = 0f;
 		rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
-		tr.emitting = true;
+		if (tr != null)
+		{
+			tr.emitting = true;
+		}
+		else
+		{
+			Debug.LogWarning("TrailRenderer component not found on the character. Please add one for the dash effect.");
+		}
 		yield return new WaitForSeconds(dashingTime);
-		tr.emitting = false;
+		if (tr != null)
+		{
+			tr.emitting = false;
+		}
 		rb.gravityScale = originalGravity;
 		isDashing = false;
 		yield return new WaitForSeconds(dashingCooldown);
