@@ -41,8 +41,11 @@ public class PlayerAttack : MonoBehaviour
 
 		foreach (Collider2D enemy in hitEnemies)
 		{
-			// Gây sát thương cho kẻ địch (giả sử kẻ địch có script PlayerHealth hoặc EnemyHealth)
-			MiniBossHealth enemyHealth = enemy.GetComponent<MiniBossHealth>();
+			// Gây sát thương cho kẻ địch (giả sử kẻ địch có script PlayerHealth hoặc EnemyHealth)	
+			// Tất cả mấy con quái có hp phải có kế thừa IDamageable để hp bị trừ từ quái hoạt động
+			// Ví dụ: MiniBossHealth, SkeletonHealth, FireBossHealth, ... đều phải có IDamageable
+			// Vd: public class MiniBossHealth : MonoBehaviour, IDamageable
+			IDamageable enemyHealth = enemy.GetComponent<IDamageable>();
 			if (enemyHealth != null)
 				enemyHealth.TakeDamage(attackDamage);
 		}
