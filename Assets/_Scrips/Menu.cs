@@ -29,7 +29,7 @@ public class Menu : MonoBehaviour
 
 	public void play()
 	{
-		SceneManager.LoadScene("Game");
+        LevelManager.StartNewGame();
 	}
 	public void quit()
 	{
