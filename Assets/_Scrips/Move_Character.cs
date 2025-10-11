@@ -20,6 +20,11 @@ public class Move_Character : MonoBehaviour
 	private float dashingPower = 40f;
 	private float dashingTime = 1f;
 	private float dashingCooldown = 1f;
+	private float defaultGravityScale; // Gravity scale to restore after dash
+	private Coroutine dashCoroutine;   // Reference to active dash coroutine
+	private bool dashCancelled;        // Flag to cancel dash early
+	[SerializeField] private float momentumCarryDuration = 0.15f; // Preserve dash momentum after dash/jump
+	private float momentumCarryTimer = 0f;
 
 	[SerializeField] private TrailRenderer tr; // Khoảng cách dashes
 	[SerializeField] private Joystick joystick;
@@ -43,6 +48,7 @@ public class Move_Character : MonoBehaviour
 		rb = GetComponent<Rigidbody2D>();
 		animator = GetComponent<Animator>();
 		originalScale = transform.localScale;
+		defaultGravityScale = rb.gravityScale;
 	}
 
 	void Update()
@@ -57,8 +63,24 @@ public class Move_Character : MonoBehaviour
 			moveX = joystick.Horizontal;
 		}
 	
-		// Di chuyển nhân vật
-		rb.velocity = new Vector2(moveX * speed, rb.velocity.y);
+
+		// Di chuyển nhân vật (không ghi đè khi đang dash)
+		if (!isDashing)
+		{
+			if (momentumCarryTimer > 0f)
+			{
+				// Trong thời gian giữ quán tính, chỉ thay đổi khi input vượt quá vận tốc hiện tại
+				float desiredVelX = moveX * speed;
+				if (Mathf.Abs(desiredVelX) > Mathf.Abs(rb.velocity.x))
+					rb.velocity = new Vector2(desiredVelX, rb.velocity.y);
+				// Giảm dần thời gian giữ quán tính
+				momentumCarryTimer -= Time.deltaTime;
+			}
+			else
+			{
+				rb.velocity = new Vector2(moveX * speed, rb.velocity.y);
+			}
+		}
 
 		// Lật mặt nhân vật
 		if (moveX > 0)
@@ -66,21 +88,27 @@ public class Move_Character : MonoBehaviour
 		else if (moveX < 0)
 			transform.localScale = new Vector3(-Mathf.Abs(originalScale.x), originalScale.y, originalScale.z);
 
-		if (isDashing) return;
-		
-		// Nhảy
-		if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+		// Nhảy (cho phép nhảy khi đang dash để thực hiện dash jump)
+		if (Input.GetKeyDown(KeyCode.Space) && (isGrounded || isDashing))
 		{
 			Debug.Log("Jump button pressed");
 			if (audioManager != null && audioManager.Jump != null)
 				audioManager.PlaySFX(audioManager.Jump); // Play jump sound if available
 			else Debug.LogWarning("AudioManager or Jump sound not properly set up!");
 
+			// Nếu đang dash, hủy dash sớm và giữ quán tính ngang một thời gian ngắn
+			if (isDashing)
+			{
+				CancelDash();
+				momentumCarryTimer = momentumCarryDuration;
+			}
+
 			rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
 			isGrounded = false;
 		}
 		
-		if (Input.GetKeyDown(KeyCode.LeftShift) && canDash)
+		// Dash chỉ khi đang đứng trên mặt đất (Ground Dash)
+		if (Input.GetKeyDown(KeyCode.LeftShift) && canDash && isGrounded)
 			StartCoroutine(Dash());
 
 		// Cập nhật các biến cho Animator
@@ -109,26 +137,35 @@ public class Move_Character : MonoBehaviour
 	{
 		canDash = false;
 		isDashing = true;
-		float originalGravity = rb.gravityScale;
+		dashCancelled = false;
+		// Tắt trọng lực tạm thời và phóng về phía đang đối mặt
 		rb.gravityScale = 0f;
-		rb.velocity = new Vector2(transform.localScale.x * dashingPower, 0f);
-		if (tr != null)
+		float dashDirection = Mathf.Sign(transform.localScale.x);
+		rb.velocity = new Vector2(dashDirection * dashingPower, 0f);
+		if (tr != null) tr.emitting = true;
+		else Debug.LogWarning("TrailRenderer component not found on the character. Please add one for the dash effect.");
+
+		float elapsed = 0f;
+		while (!dashCancelled && elapsed < dashingTime)
 		{
-			tr.emitting = true;
+			elapsed += Time.deltaTime;
+			yield return null;
 		}
-		else
-		{
-			Debug.LogWarning("TrailRenderer component not found on the character. Please add one for the dash effect.");
-		}
-		yield return new WaitForSeconds(dashingTime);
-		if (tr != null)
-		{
-			tr.emitting = false;
-		}
-		rb.gravityScale = originalGravity;
+
+		if (tr != null) tr.emitting = false;
+		rb.gravityScale = defaultGravityScale;
 		isDashing = false;
+		// Giữ quán tính ngang trong thời gian ngắn sau khi kết thúc dash
+		momentumCarryTimer = momentumCarryDuration;
+
 		yield return new WaitForSeconds(dashingCooldown);
 		canDash = true;
+	}
+
+	private void CancelDash()
+	{
+		if (!isDashing) return;
+		dashCancelled = true;
 	}
 
 	private void OnCollisionEnter2D(Collision2D collision)
