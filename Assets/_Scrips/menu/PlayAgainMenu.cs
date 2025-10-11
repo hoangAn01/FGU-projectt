@@ -59,7 +59,7 @@ public class PlayAgainMenu : MonoBehaviour
 
     public void Replay()
     {
-        SceneManager.LoadScene("Game"); // Hoặc tên scene chơi chính của bạn
+        LevelManager.RestartLevel();
     }
 
     public void Quit()
