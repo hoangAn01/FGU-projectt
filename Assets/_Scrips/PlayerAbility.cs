@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using static UnityEngine.RuleTile.TilingRuleOutput;
 using UnityEngine.UI;
 
 namespace Game // S3903: Added named namespace
@@ -32,7 +31,7 @@ namespace Game // S3903: Added named namespace
 
 		private void Awake()
 		{
-			audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+			audioManager = GameObject.FindGameObjectWithTag("Audio")?.GetComponent<AudioManager>();
 		}
 
 		void Start()

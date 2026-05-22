@@ -22,8 +22,11 @@ public class SkeletonHealth : MonoBehaviour, IDamageable
         animator = GetComponent<Animator>();
     }
 
+    private bool isDead = false;
+
     public void TakeDamage(float amount)
     {
+        if (isDead) return;
         Debug.Log("chem thanh cong");
         currentHealth -= amount;
         if (currentHealth < 0) currentHealth = 0;
@@ -43,8 +46,8 @@ public class SkeletonHealth : MonoBehaviour, IDamageable
 
     void Die()
     {   
-
-        Debug.Log("Player died!");
+        isDead = true;
+        Debug.Log("Skeleton died!");
         animator.SetTrigger("Dead");
         StartCoroutine(WaitForDeathAnimation());
         // Tỉ lệ rơi bình máu
