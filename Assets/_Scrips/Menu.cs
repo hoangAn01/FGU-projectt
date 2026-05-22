@@ -67,7 +67,8 @@ public class Menu : MonoBehaviour
 		PlayerPrefs.Save(); // Lưu thay đổi
 
 		// Cập nhật lại text trên màn hình
-		highScoreText.text = "Điểm Cao: 0";
+		if (highScoreText != null)
+			highScoreText.text = "Điểm Cao: 0";
 		Debug.Log("ĐÃ RESET: High Score và các kỹ năng đã mở khóa!");
 	}
 }

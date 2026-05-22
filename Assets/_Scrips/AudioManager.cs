@@ -26,8 +26,13 @@ public class AudioManager : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
-		musicSource.clip = background;
-		musicSource.Play();
+		if (musicSource != null)
+		{
+			musicSource.clip = background;
+			musicSource.Play();
+		}
+		else
+			Debug.LogWarning("musicSource is not assigned in AudioManager!");
 	}
 
 	// Update is called once per frame

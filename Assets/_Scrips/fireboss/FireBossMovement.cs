@@ -121,6 +121,7 @@ public class FireBossMovement : MonoBehaviour
         int ticks = 3; // 3 lần đánh
         for (int i = 0; i < ticks; i++)
         {
+            if (player == null) yield break;
             if (animator != null)
                 animator.SetTrigger("attack");
             float distance = Vector2.Distance(transform.position, player.position);

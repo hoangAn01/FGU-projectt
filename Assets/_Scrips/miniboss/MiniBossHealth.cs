@@ -18,8 +18,11 @@ public class MiniBossHealth : MonoBehaviour, IDamageable
         UpdateHealthBar();
     }
 
+    private bool isDead = false;
+
     public void TakeDamage(float amount)
     {
+        if (isDead) return;
         Debug.Log("chem thanh cong");
         currentHealth -= amount;
         if (currentHealth < 0) currentHealth = 0;
@@ -39,18 +42,18 @@ public class MiniBossHealth : MonoBehaviour, IDamageable
 
     void Die()
     {
+        isDead = true;
         // Tỉ lệ rơi bình máu
         if (healthPotionPrefab != null && Random.value < dropRate)
         {
             Instantiate(healthPotionPrefab, transform.position, Quaternion.identity);
         }
-        Destroy(gameObject);
-
         // Tìm player và cộng điểm
         PlayerHealth player = FindObjectOfType<PlayerHealth>();
         if (player != null)
         {
             player.AddScore(10);
         }
+        Destroy(gameObject);
     }
 }

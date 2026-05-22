@@ -10,7 +10,7 @@ public class PlayerAttack : MonoBehaviour
 	AudioManager audioManager;
 
 	private void Awake() { 
-		audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+		audioManager = GameObject.FindGameObjectWithTag("Audio")?.GetComponent<AudioManager>();
 	}
 
 	void Start(){
